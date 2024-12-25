@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>II.B.TECH (R23) Semester-1 : SGPA Calculator </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <marquee scrollamount="15" direction="right"><h1>II.B.TECH (R23) Semester-1 : SGPA Calculator</h1></marquee>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <em>Dark Mode</em>
+            </div>
+        </div>
+        <form id="sgpaForm">
+            <h2>Theory Subjects (3 Credits each)</h2>
+            <div class="subject">
+                <label for="DM_GT">DMGT:</label>
+                <select id="DM_GT" required>
+                    <option value="">Enter your Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+            <div class="subject">
+                <label for="UHV">UHV:</label>
+                <select id="UHV" required>
+                    <option value="">Enter your Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+            <div class="subject">
+                <label for="DLCO">DLCO:</label>
+                <select id="DLCO" required>
+                    <option value="">Enter your Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+        
+            <div class="subject">
+                <label for="DBMS">DBMS:</label>
+                <select id="DBMS" required>
+                    <option value="">Enter your Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+            <div class="subject">
+                <label for="OOPJ">OOPJ:</label>
+                <select id="OOPJ" required>
+                    <option value="">Enter your Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+
+            <h2>Practical Subjects (1.5 Credits each)</h2>
+            <div class="subject">
+                <label for="OOPJ_LAB">OOPJ LAB:</label>
+                <select id="OOPJ_LAB" required>
+                    <option value="">Enter your Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+
+            <div class="subject">
+                <label for="DBMS_LAB">DBMS LAB:</label>
+                <select id="DBMS_LAB" required>
+                    <option value="">Enter your Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+
+            <h2>Skill Enhancement Course (2 Credits)</h2>
+            <div class="subject">
+                <label for="SKILL_COURSE">Python Lab:</label>
+                <select id="SKILL_COURSE" required>
+                    <option value="">Enter your Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+
+            <div id="result" class="hidden">
+                <h2>Your SGPA:</h2>
+              <strong> <p id="sgpa"></p> </strong> 
+            </div>
+
+            <button type="submit">👉🏻 Calculate my SGPA 👈🏻</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
