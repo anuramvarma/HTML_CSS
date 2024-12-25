@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>II.B.TECH (R23) Semester-2 : SGPA Calculator </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <marquee scrollamount="19"> <h1>II.B.TECH (R23) Semester-2 : SGPA Calculator </h1></marquee>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <em>Dark Mode</em>
+            </div>
+        </div>
+        <form id="sgpaForm">
+            <H2>Management Course with 2 credits</H2>
+            <div class="subject">
+                <label for="MEFA">MEFA:</label>
+                <select id="MEFA" required>
+                    <option value="">Select Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+            <h2>Theory Subjects (3 credits each)</h2>
+            <div class="subject">
+                <label for="P-S">P-S:</label>
+                <select id="P-S" required>
+                    <option value="">Select Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+            <div class="subject">
+                <label for="OS">OS:</label>
+                <select id="OS" required>
+                    <option value="">Enter your Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+            <div class="subject">
+                <label for="SE">SE:</label>
+                <select id="SE" required>
+                    <option value="">Select Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+            <div class="subject">
+                <label for="ADS">ADS-AA:</label>
+                <select id="ADS" required>
+                    <option value="">Select Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+
+            <h2>Practical Subjects (1.5 credits each)</h2>
+            <div class="subject">
+                <label for="ADS_AA Lab">ADS_AA LAB:</label>
+                <select id="ADS_AA Lab" required>
+                    <option value="">Select Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+            <div class="subject">
+                <label for="OS_LAB">OS LAB:</label>
+                <select id="OS_LAB" required>
+                    <option value="">Select Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+
+            <h2>Skill Enhancement Course (2 credits)</h2>
+            <div class="subject">
+                <label for="SKILL_COURSE">FULL STACK DEVELOPMENT:</label>
+                <select id="SKILL_COURSE" required>
+                    <option value="">Select Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+            <div class="subject">
+                <label for="SKILL_COURSE2">DT_I Lab</label>
+                <select id="SKILL_COURSE2" required>
+                    <option value="">Select Grade</option>
+                    <option value="10">S</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                </select>
+            </div>
+            <div id="result" class="hidden">
+                <h2>Your SGPA:</h2>
+              <strong> <p id="sgpa"></p> </strong> 
+            </div>
+
+            <button type="submit">Click to Calculate SGPA</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
