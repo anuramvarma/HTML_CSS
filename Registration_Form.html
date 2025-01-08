@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1,h2{
+        text-align: center;
+    }
+    table{
+        border: 1px solid #999;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+        padding: 0px;
+    }
+    th,td{
+        padding: 0px;;
+    }
+    th{
+        
+        text-align: justify;
+    }
+</style>
+<body>
+    <h1>Registration Form</h1>
+    <h2>Fill your details </h2>
+    <table>
+        <tr>
+            <form action="http://httpbin.org/get" method="get">
+               <th> <label for="name">FullName: </label></td>
+               <td><input type="text" id="name" name="FullName"></th>
+            </form>
+        </tr>
+        <tr>
+            <form action="http://httpbin.org/get" method="get">
+                <th><label for="password">Password: </label></th>
+                <td><input type="password" id="password" name="password"></td>
+            </form>
+        </tr>
+        <tr>
+            <form action="http://httpbin.org/get" method="get">
+                <th><label for="age">Age</label></th>
+                <td><input type="number" id="age" min="1" max="100"></td>
+            </form>
+        </tr>
+        <tr>
+                <form action="http://httpbin.org/get" method="get">
+                    <th><label for="DOB">Bate-of-Birth</label></th>
+                    <td><input type="date" id="DOB" name="Date-of-Birth"></td>
+                </form>
+        </tr>
+        <tr>
+            
+        </tr>
+    </table>
+</body>
+</html>
