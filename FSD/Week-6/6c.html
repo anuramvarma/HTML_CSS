@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Input Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        .input-method {
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            width: 80%;
+            max-width: 600px;
+        }
+        input, button {
+            margin: 12px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: rgb(153, 153, 153,0.4);
+        }
+        #submit{
+            background-color: bisque;
+            color: rgb(4, 23, 31);
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Input Methods To check EVEN/ODD</h1>
+
+    <!-- 1. Using prompt() -->
+    <div class="input-method">
+        <h2>Using prompt()</h2>
+        <button id="submit" onclick="usingPrompt()">Try 'prompt()'</button>
+        <p id="output1"></p>
+    </div>
+
+    <!-- 2. Using input fields -->
+    <div class="input-method">
+        <h2>Using Input Fields</h2>
+        <input type="text" id="inputField" placeholder="Enter a number">
+        <button id="submit" onclick="usingInputFields()">Submit</button>
+        <p id="output2"></p>
+    </div>
+
+    <!-- 3. Using forms -->
+    <div class="input-method">
+        <h2>Using Forms</h2>
+        <form id="form" onsubmit="handleForm(event)">
+            <input type="text" id="formInput" placeholder="Enter a number">
+            <button id="submit" type="submit">Submit</button>
+        </form>
+        <p id="output3"></p>
+    </div>
+
+    <!-- 4. Using console input (for demonstration purposes) -->
+    <div class="input-method">
+        <h2>Using Console Input</h2>
+        <button id="submit" onclick="usingConsoleInput()">Try Console Input</button>
+        <p id="output4"></p>
+    </div>
+
+    <script>
+        // 1. Using prompt()
+        function usingPrompt() {
+            const userinput = prompt("Enter a number:");
+            const number = parseFloat(userinput); // Convert input to a number
+            if (isNaN(number)) {
+                document.getElementById("output1").innerHTML = "Please enter a valid number.";
+            } else if (number % 2 === 0) {
+                document.getElementById("output1").innerHTML = `${number} is EVEN`;
+            } else {
+                document.getElementById("output1").innerHTML = `${number} is ODD`;
+            }
+        }
+
+        // 2. Using input fields
+        function usingInputFields() {
+            const userinput = document.getElementById("inputField").value;
+            const number = parseFloat(userinput); // Convert input to a number
+            if (isNaN(number)) {
+                document.getElementById("output2").innerHTML = "Please enter a valid number.";
+            } else if (number % 2 === 0) {
+                document.getElementById("output2").innerHTML = `${number} is EVEN`;
+            } else {
+                document.getElementById("output2").innerHTML = `${number} is ODD`;
+            }
+        }
+
+        // 3. Using forms
+        function handleForm(event) {
+            event.preventDefault(); // Prevent form submission
+            const userinput = document.getElementById("formInput").value;
+            const number = parseFloat(userinput); // Convert input to a number
+            if (isNaN(number)) {
+                document.getElementById("output3").innerHTML = "Please enter a valid number.";
+            } else if (number % 2 === 0) {
+                document.getElementById("output3").innerHTML = `${number} is EVEN`;
+            } else {
+                document.getElementById("output3").innerHTML = `${number} is ODD`;
+            }
+        }
+
+        // 4. Using console input (for demonstration purposes)
+        function usingConsoleInput() {
+            const userinput = "This is a simulated console input.";
+            console.log("Simulated input:", userinput);
+            document.getElementById("output4").innerHTML = "Check the console for the simulated input.";
+        }
+    </script>
+</body>
+</html>
