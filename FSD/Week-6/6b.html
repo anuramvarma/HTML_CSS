@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Output Methods</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        .output {
+            border: 1px solid black;
+            padding: 1em;
+            margin: 1em;
+            max-width: 60%;
+            background-color: rgba(153, 153, 153, 0.2);
+            margin-left: 22%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Different ways for displaying output</h1>
+    <!-- Using innerHTML -->
+    <div class="output">
+        <h2>Using 'innerHTML'</h2>
+        <p id="output1"></p>
+    </div>
+    <!-- Using document.write -->
+    <div class="output">
+        <h2>Using document.write</h2>
+        <button onclick="usingDocumentwrite()">document.write</button>
+    </div>
+    <!-- Using Alert -->
+    <div class="output">
+        <h2>Using Alert</h2>
+        <button onclick="usingAlert()">Alert</button>
+    </div>
+    <!-- Using console.log -->
+    <div class="output">
+        <h2>Using console.log</h2>
+        <button onclick="usingConsole()">console.log</button>
+    </div>
+    <script>
+        // 1. Using innerHTML
+        document.getElementById("output1").innerHTML = "This output is generated using innerHTML";
+        // 2. Using document.write
+        function usingDocumentwrite() {
+            document.write("This output is generated using document.write()");
+        }
+        // 3. Using Alert
+        function usingAlert() {
+            alert("This output is generated using alert()");
+        }
+        // 4. Using console.log
+        function usingConsole() {
+            console.log("This output is generated using console.log()");
+        }
+    </script>
+</body>
+</html>
