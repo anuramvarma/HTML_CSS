@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Checker</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .eligible-yes {
+            color: green;
+            font-size: 25px;
+        }
+        .eligible-no {
+            color: red;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let name = prompt("Enter the name:");
+        let age = parseInt(prompt("Enter the age:"));
+        let isEligible = (age >= 18) ? "Yes" : "No";
+        let colorClass = (isEligible === "Yes") ? "eligible-yes" : "eligible-no";
+        document.write(`
+            <h1>Voting Eligibility test</h1>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Eligible to Vote</th>
+                </tr>
+                <tr>
+                    <td>${name}</td>
+                    <td>${age}</td>
+                    <td class="${colorClass}">${isEligible}</td>
+                </tr>
+            </table>
+        `);
+    </script>
+</body>
+</html>
