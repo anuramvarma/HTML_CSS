@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Object Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Array Object Methods</h1>
+    <p id="output"></p>
+    <button onclick="addElement()">Push (Add Item)</button>
+    <button onclick="removeElement()">Pop (Remove Last)</button>
+    <button onclick="sortArray()">Sort Array</button>
+    <button onclick="reverseArray()">Reverse Array</button>
+    <button onclick="spliceArray()">Splice (Remove & Insert)</button>
+    <button onclick="sliceArray()">Slice (Copy Part of Array)</button>
+    <script>
+        // Array declaration
+        let fruits = ["Apple", "Banana", "Mango", "Orange"];
+        function displayArray() {
+            document.getElementById("output").innerHTML = "Array: " + fruits.join(", ");
+        }
+        // Adding an element to the end
+        function addElement() {
+            fruits.push("Grapes");
+            displayArray();
+        }
+        // Removing the last element
+        function removeElement() {
+            fruits.pop();
+            displayArray();
+        }
+        // Sorting the array
+        function sortArray() {
+            fruits.sort();
+            displayArray();
+        }
+        // Reversing the array
+        function reverseArray() {
+            fruits.reverse();
+            displayArray();
+        }
+        // Splicing the array (removes 1 item from index 1 and adds "Pineapple")
+        function spliceArray() {
+            fruits.splice(1, 1, "Pineapple");
+            displayArray();
+        }
+        // Slicing the array (extracts elements from index 1 to 3)
+        function sliceArray() {
+            let slicedArray = fruits.slice(1, 3);
+            document.getElementById("output").innerHTML = "Sliced Array: " + slicedArray.join(", ");
+        }
+        // Initial display
+        displayArray();
+    </script>
+</body>
+</html>
